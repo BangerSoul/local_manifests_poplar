@@ -47,7 +47,7 @@ repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
 ### 4. Start Build
 
-> **Kernel Source vs. Prebuilt GKI Fallback**: `device/lenovo/poplar/BoardConfig.mk` checks `$(wildcard kernel/lenovo/poplar/Makefile)`. Because `kernel/lenovo/poplar` tracks `tb311fu_defconfig`, hardware patches, and `assemble_boot_vector.py` without full C sources, either extract the Lenovo GPL `kernel-6.6` archive / clone `kernel_lenovo_TB311FU` into `kernel/lenovo/poplar/` for inline compilation, or stage a prebuilt `Image.gz` at `device/lenovo/poplar/prebuilt/Image.gz` (compiled standalone or unpacked from stock `boot.img` via `assemble_boot_vector.py --unpack`).
+> **Kernel Source vs. Prebuilt GKI Fallback**: `device/lenovo/poplar/BoardConfig.mk` checks `$(wildcard kernel/lenovo/poplar/Makefile)`. Because `kernel/lenovo/poplar` tracks `tb311fu_defconfig`, hardware patches, and `assemble_boot_vector.py` without full C sources, either extract the Lenovo GPL `kernel-6.6` archive / clone `kernel_lenovo_TB311FU` into `kernel/lenovo/poplar/` for inline compilation, or stage a prebuilt `Image.gz` at `device/lenovo/poplar/prebuilt/Image.gz` (compiled standalone or unpacked from stock `boot.img` via `assemble_boot_vector.py --unpack`). Optionally stage `device/lenovo/poplar/prebuilt/dtbo.img` from stock `dtbo.img` to set `BOARD_PREBUILT_DTBOIMAGE` and include `dtbo` in `AB_OTA_PARTITIONS` (when omitted, `BoardConfig.mk` excludes `dtbo` from `AB_OTA_PARTITIONS` so `m bacon` builds without error).
 
 ```bash
 source build/envsetup.sh
