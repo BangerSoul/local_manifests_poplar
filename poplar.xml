@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Remotes -->
+    <remote name="github"
+            fetch="https://github.com/" />
+
+    <remote name="lineage"
+            fetch="https://github.com/LineageOS/"
+            revision="lineage-21.0" />
+
+    <!-- Lenovo Tab M9 / Tab M11 (TB311FU - poplar) Trees -->
+    <project path="device/lenovo/poplar"
+             name="iamsh/android_device_lenovo_poplar"
+             remote="github"
+             revision="lineage-21.0" />
+
+    <project path="vendor/lenovo/poplar"
+             name="iamsh/proprietary_vendor_lenovo_poplar"
+             remote="github"
+             revision="lineage-21.0" />
+
+    <project path="kernel/lenovo/poplar"
+             name="iamsh/android_kernel_lenovo_poplar"
+             remote="github"
+             revision="lineage-21.0" />
+
+    <!-- LineageOS MediaTek Hardware & SEPolicy Dependencies -->
+    <project path="hardware/mediatek"
+             name="android_hardware_mediatek"
+             remote="lineage"
+             revision="lineage-21.0" />
+
+    <project path="device/mediatek/sepolicy_vndr"
+             name="android_device_mediatek_sepolicy_vndr"
+             remote="lineage"
+             revision="lineage-21.0" />
+</manifest>
