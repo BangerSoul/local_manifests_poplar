@@ -1,6 +1,6 @@
-# Local Manifests for Lenovo Tab M9 / Tab M11 (`TB311FU` / `poplar`)
+# Local Manifests for Lenovo Tab (`TB311FU` / `poplar`)
 
-This repository provides the Android `repo` local manifest (`poplar.xml`) required to sync the device, vendor, kernel, and MediaTek platform dependency trees for building **LineageOS** (`lineage-21.0` / `lineage-22.1`) for the **Lenovo TB311FU** (`poplar`).
+This repository provides the Android `repo` local manifest (`poplar.xml`) required to sync the device, vendor, kernel, and MediaTek platform dependency trees for building **LineageOS** (`lineage-21.0` / `lineage-22.1`) for the **Lenovo Tab** (`TB311FU` / `poplar`).
 
 ---
 
@@ -46,6 +46,8 @@ repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 ```
 
 ### 4. Start Build
+
+> **Kernel Source vs. Prebuilt GKI Fallback**: `device/lenovo/poplar/BoardConfig.mk` checks `$(wildcard kernel/lenovo/poplar/Makefile)`. Because `kernel/lenovo/poplar` tracks `tb311fu_defconfig`, hardware patches, and `assemble_boot_vector.py` without full C sources, either extract the Lenovo GPL `kernel-6.6` archive / clone `kernel_lenovo_TB311FU` into `kernel/lenovo/poplar/` for inline compilation, or stage a prebuilt `Image.gz` at `device/lenovo/poplar/prebuilt/Image.gz` (compiled standalone or unpacked from stock `boot.img` via `assemble_boot_vector.py --unpack`).
 
 ```bash
 source build/envsetup.sh

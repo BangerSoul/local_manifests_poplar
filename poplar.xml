@@ -8,7 +8,7 @@
             fetch="https://github.com/LineageOS/"
             revision="lineage-21.0" />
 
-    <!-- Lenovo Tab M9 / Tab M11 (TB311FU - poplar) Trees -->
+    <!-- Lenovo Tab (TB311FU / poplar) Trees -->
     <project path="device/lenovo/poplar"
              name="iamsh/android_device_lenovo_poplar"
              remote="github"
