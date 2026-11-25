@@ -6,7 +6,7 @@
 
     <remote name="lineage"
             fetch="https://github.com/LineageOS/"
-            revision="lineage-21.0" />
+            revision="lineage-21" />
 
     <!-- Lenovo Tab (TB311FU / poplar) Trees -->
     <project path="device/lenovo/poplar"
@@ -28,10 +28,10 @@
     <project path="hardware/mediatek"
              name="android_hardware_mediatek"
              remote="lineage"
-             revision="lineage-21.0" />
+             revision="lineage-21" />
 
     <project path="device/mediatek/sepolicy_vndr"
              name="android_device_mediatek_sepolicy_vndr"
              remote="lineage"
-             revision="lineage-21.0" />
+             revision="lineage-21" />
 </manifest>
