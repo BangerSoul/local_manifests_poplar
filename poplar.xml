@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- Remotes -->
-    <remote name="github"
+    <remote name="bangersoul"
             fetch="https://github.com/" />
 
     <remote name="lineage"
@@ -11,17 +11,17 @@
     <!-- Lenovo Tab (TB311FU / poplar) Trees -->
     <project path="device/lenovo/poplar"
              name="BangerSoul/android_device_lenovo_poplar"
-             remote="github"
+             remote="bangersoul"
              revision="lineage-21.0" />
 
     <project path="vendor/lenovo/poplar"
              name="BangerSoul/proprietary_vendor_lenovo_poplar"
-             remote="github"
+             remote="bangersoul"
              revision="lineage-21.0" />
 
     <project path="kernel/lenovo/poplar"
              name="BangerSoul/android_kernel_lenovo_poplar"
-             remote="github"
+             remote="bangersoul"
              revision="lineage-21.0" />
 
     <!-- LineageOS MediaTek Hardware & SEPolicy Dependencies -->
